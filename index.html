@@ -1,51 +1,74 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
-    <title>Хлай</title>
-    <link rel="stylesheet" href="css/estilo.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
+    <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
+    <title>Xlay - Главная</title>
+    <audio id="myAudio" src="audio/music.mp3" autoplay loop></audio>
+    <script>
+      myAudio.play();
+    </script>
 </head>
 
-<body>
-<div class="topnav">
-  <div class="topnav-centered">
-    <a href="index.html">Основное</a>
-  </div>
-  <a href="str1.html">Ссылки/Работы</a>
-  <a href="str2.html">Связь со мной</a>
-  <a href="str3.html">Мои видеоролики</a>
-  <div class="topnav-right">
-    <a href="https://github.com/DyxmanTM/dyxmantm.github.io"><img src="image/25231.png" style="width: 15px;"></a>
-  </div>
-</div>
 
-<div class="container">
-    <div class="row">
-      <div class="col-12">
-        <h1>Хлай/DyxmanTM</h1>
-      </div>
-    </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-12">
-      <p>Я Хлай, занимаюсь рескинами, изучаю языки программирования.</p>
-      <p> Углубляюсь больше в сторону IT Сферы. Играю в разные игры и иногда программирую.</p>
-      <p>Также я изучаю/занимаюсь:</p>
-      <ul>
-        <li>Моделирование</li>
-        <li>Дизайн</li>
-        <li>Ютуберством</li>
-      </ul>
+
+<body>
+  <div id="cherniryskii">
+    <div id="content-wrapper">
+      <button id="button" class="glow-on-hover" type="button">ヂクスまん™はかっこいいです</button>
+      <input type="range" id="volumecontroller" min="0" max="100" value="20" />
+      <script>  
+      
+        const volumeController = document.getElementById("volumecontroller")
+        volumeController.addEventListener("input", () => {
+          myAudio.volume=volumeController.value/100
+        })
+      </script>
+      <h1>Хлай/DyxmanTM</h1>
+      <p>Пиши по делу - xlay2000</p>
+      <img id="photo" src="css/ava.jpg">
+      <button id="button" class="youtube">
+        <a target="_blank" href="https://www.youtube.com/c/DyxmanTM">
+          <p>
+            <img class="logo" src="css/youtube.png">
+            <span class="textbutton">Мой Youtube</span>
+          </p>
+        </a>
+      </button>
+
+
+      <button id="button" class="vk">
+        <a target="_blank" href="https://vk.com/dyxmantm5">
+          <p>
+            <img class="logo" src="css/vk.png">
+            <span class="textbutton">Мой ВКонтакте</span>
+          </p>
+        </a>
+      </button>
+
+      <button id="button" class="discord">
+        <a target="_blank" href="https://discord.gg/mzVwHjNC9Q">
+          <p>
+            <img class="logo" src="css/discord.png">
+            <span class="textbutton">Мой Discord сервер</span>
+          </p>
+        </a>
+      </button>
+
+
+      <button id="button" class="telegram">
+        <a target="_blank" href="https://t.me/xlay247">
+          <p>
+            <img class="logo" src="css/telegram.png">
+            <span class="textbutton">Мой телеграмм</span>
+          </p>
+        </a>
+      </button>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-      <img float: right src="https://i.imgur.com/qr2RL9r.jpg" style="width:450px;">
-    </div>
-  </div>
-</div>
 </body>
+
 </html>
