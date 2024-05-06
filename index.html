@@ -3,72 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quicksand">
-    <link rel="shortcut icon" href="css/favicon.ico" type="image/x-icon">
-    <title>Xlay - Главная</title>
-    <audio id="myAudio" src="audio/music.mp3" autoplay loop></audio>
+    <title>Xlay/DyxmanTM</title>
+    <link rel="stylesheet" href="style/style.css">
     <script>
-      myAudio.play();
+        function copyDiscordAccount() {
+            var discordAccount = "xlay2000";
+            navigator.clipboard.writeText(discordAccount)
+                .then(function() {
+                    var tooltip = document.getElementById("copyTooltip");
+                    tooltip.style.opacity = "1";
+                    setTimeout(function() {
+                        tooltip.style.opacity = "0";
+                    }, 2000);
+                })
+                .catch(function(error) {
+                    console.error("Не удалось скопировать Discord аккаунт: ", error);
+                });
+        }
     </script>
 </head>
-
-
-
 <body>
-  <div id="cherniryskii">
-    <div id="content-wrapper">
-      <button id="button" class="glow-on-hover" type="button">ヂクスまん™はかっこいいです</button>
-      <input type="range" id="volumecontroller" min="0" max="100" value="20" />
-      <script>  
-      
-        const volumeController = document.getElementById("volumecontroller")
-        volumeController.addEventListener("input", () => {
-          myAudio.volume=volumeController.value/100
-        })
-      </script>
-      <h1>Хлай/DyxmanTM</h1>
-      <p>Пиши по делу - xlay2000</p>
-      <img id="photo" src="css/ava.jpg">
-      <button id="button" class="youtube">
-        <a target="_blank" href="https://www.youtube.com/c/DyxmanTM">
-          <p>
-            <img class="logo" src="css/youtube.png">
-            <span class="textbutton">Мой Youtube</span>
-          </p>
-        </a>
-      </button>
-
-
-      <button id="button" class="vk">
-        <a target="_blank" href="https://vk.com/dyxmantm5">
-          <p>
-            <img class="logo" src="css/vk.png">
-            <span class="textbutton">Мой ВКонтакте</span>
-          </p>
-        </a>
-      </button>
-
-      <button id="button" class="discord">
-        <a target="_blank" href="https://discord.gg/mzVwHjNC9Q">
-          <p>
-            <img class="logo" src="css/discord.png">
-            <span class="textbutton">Мой Discord сервер</span>
-          </p>
-        </a>
-      </button>
-
-
-      <button id="button" class="telegram">
-        <a target="_blank" href="https://t.me/xlay247">
-          <p>
-            <img class="logo" src="css/telegram.png">
-            <span class="textbutton">Мой телеграмм</span>
-          </p>
-        </a>
-      </button>
+  <div class="container">
+    <img src="css/ava.jpg" alt="Аватарка" class="avatar">
+    <div class="name">Xlay/DyxmanTM</div>
+    <div class="buttons">
+      <a href="https://vk.com/dyxmantm5" class="button">Вконтакте</a>
+      <a href="https://www.youtube.com/c/DyxmanTM" class="button">YouTube</a>
+      <a href="https://t.me/minecapt" class="button">Telegram</a>
+      <a href="https://discord.gg/GG8AEN52Te" class="button">Discord Сервер 1</a>
+      <a href="https://discord.gg/BMeF5WprZG" class="button">Discord Сервер 2</a>
+      <a href="#" class="button" onclick="copyDiscordAccount()">Discord Аккаунт<span id="copyTooltip" class="tooltip">Скопировано</span></a>
     </div>
   </div>
 </body>
-
 </html>
